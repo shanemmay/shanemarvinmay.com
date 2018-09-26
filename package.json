@@ -1,0 +1,27 @@
+{
+  "name": "shanemarvinmay.com",
+  "version": "1.0.0",
+  "description": "shane marvin may personal page",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log(\"this is the test command\");"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shanemmay/shanemarvinmay.com.git"
+  },
+  "keywords": [
+    "shane",
+    "marvin",
+    "may"
+  ],
+  "author": "shane marvin may",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shanemmay/shanemarvinmay.com/issues"
+  },
+  "homepage": "https://github.com/shanemmay/shanemarvinmay.com#readme",
+  "dependencies": {
+    "http": "0.0.0"
+  }
+}
