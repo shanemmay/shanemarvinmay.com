@@ -7,6 +7,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+    <!--cyborg css https://bootswatch.com/cyborg/-->
+    <link rel="stylesheet" href="../css/cyborg.css">
+
     <style>
 
         #navbarColor02
@@ -23,6 +26,27 @@
             padding: auto;
         }
 
+        .nav_work_items , .nav_fun_items
+        {
+            visibility: hidden;
+        }
+
+        @media (max-width: 992px)
+        {
+            #collapse-title
+            {
+                visibility: visible;
+            }
+        }
+
+        @media (min-width: 992px)
+        {
+            #collapse-title
+            {
+                visibility: hidden;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -32,7 +56,7 @@
         <!--<div class="col">-->
             <!--<a class="navbar-brand " href="#">Navbar</a>-->
         <!--</div>-->
-
+        <a class="nav-link navbar-brand" id="collapse-title" href="#" >Shane Marvin May <span class="sr-only">(current)</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,18 +66,38 @@
                 <div class="col"></div>
                 <ul class="navbar-nav">
                     <div class="col">
-                        <li class="nav-item active ">
+                        <li class="nav-item active nav_work_items" >
+                            <a class="nav-link " href="#">Resume <span class="sr-only">(current)</span></a>
+                        </li>
+                    </div>
+                    <div class="col">
+                        <li class="nav-item active nav_work_items">
+                            <a class="nav-link " href="#">another <span class="sr-only">(current)</span></a>
+                        </li>
+                    </div>
+                    <div class="col">
+                        <li class="nav-item active " id="nav_work_item" onmouseover="showSideMenu(this.id)" onmouseleave="hideSideMenu(this.id)">
                             <a class="nav-link " href="#">Work <span class="sr-only">(current)</span></a>
                         </li>
                     </div>
                     <div class="col">
                         <li class="nav-item active ">
-                            <a class="nav-link navbar-brand" href="#">Navbar <span class="sr-only">(current)</span></a>
+                            <a class="nav-link navbar-brand" href="#">Shane Marvin May <span class="sr-only">(current)</span></a>
                         </li>
                     </div>
                     <div class="col">
-                        <li class="nav-item active ">
-                            <a class="nav-link " href="#">Work <span class="sr-only">(current)</span></a>
+                        <li class="nav-item active " id="nav_fun_item" onmouseover="showSideMenu(this.id)" onmouseleave="hideSideMenu(this.id)">
+                            <a class="nav-link " href="#">Fun <span class="sr-only">(current)</span></a>
+                        </li>
+                    </div>
+                    <div class="col">
+                        <li class="nav-item active nav_fun_items">
+                            <a class="nav-link " href="#">another_fun <span class="sr-only">(current)</span></a>
+                        </li>
+                    </div>
+                    <div class="col">
+                        <li class="nav-item active nav_fun_items">
+                            <a class="nav-link " href="#">another_fun <span class="sr-only">(current)</span></a>
                         </li>
                     </div>
                 </ul>
@@ -86,6 +130,32 @@
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
+
+
+    <script>
+
+        const showSideMenu = (id) =>
+        {
+            const className = id + 's';
+            let items = document.getElementsByClassName(className);
+            for(let i = 0; i < items.length; i++)
+            {
+                items[i].style.visibility = "visible";
+            }
+        };
+
+        const hideSideMenu = (id) =>
+        {
+            const className = id + 's';
+            let items = document.getElementsByClassName(className);
+            for(let i = 0; i < items.length; i++)
+            {
+                items[i].style.visibility = "hidden";
+            }
+        };
+
+
+    </script>
 
 </body>
 
